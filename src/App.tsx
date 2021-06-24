@@ -1,7 +1,8 @@
 import { Navigation } from 'components/Navigation'
 import { createClient, Provider } from 'urql'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Footer } from 'components/Footer'
+import { Home } from 'pages/Home'
 
 const client = createClient({
   url: 'https://api.yelp.com/v3/graphql',
@@ -17,7 +18,9 @@ export const App = () => {
     <Provider value={client}>
       <Router>
         <Navigation />
-        <div>Hello World</div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
         <Footer />
       </Router>
     </Provider>
