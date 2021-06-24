@@ -14,10 +14,10 @@ const containerStyles = css`
 export const Home = () => {
   return (
     <main className={tw(containerStyles)}>
+      <h1 className={tw`text-7xl font-bold tablet:(text-9xl) pt-4`}>Minato</h1>
       <form
         className={tw`h-2/3 w-full flex flex-col items-center justify-evenly tablet:(h-1/2)`}
       >
-        <h1 className={tw`text-7xl font-bold tablet:(text-9xl)`}>Minato</h1>
         <div
           className={tw`h-8 w-72 bg-current rounded-sm flex flex-row items-center justify-evenly tablet:(h-10 w-96)`}
         >
